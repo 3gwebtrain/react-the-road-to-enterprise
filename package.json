@@ -7,12 +7,19 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "test:e2e": "start-server-and-test preview http://127.0.0.1:4173/ 'npm run cypress:open'",
+    "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:4173/ 'npm run cypress:run'",
+    "cypress:open": "cypress open --e2e",
+    "cypress:run": "cypress run --e2e",
     "stylelint": "npx stylelint \"./**/*.{css,scss,sass}\" --config \"./stylelint.config.cjs\"",
     "stylelint:fix": "npm run stylelint -- --fix",
     "prettier:fix": "prettier --config ./prettier.config.cjs --write ./src/**/*.{css,scss,ts,tsx} ",
     "prettier:check": "prettier --config ./prettier.config.cjs --check ./src/**/*.{css,scss,ts,tsx}",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "test:unit": "vitest --environment jsdom",
+    "test:unit:coverage": "vitest run --coverage --environment jsdom",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -22,6 +29,8 @@
     "@rushstack/eslint-patch": "1.2.0",
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/cypress": "^9.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -37,6 +46,8 @@
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-vitest-globals": "1.2.0",
+    "husky": "^8.0.3",
+    "jsdom": "^21.1.0",
     "postcss": "^8.4.21",
     "postcss-extend": "1.0.5",
     "postcss-flexbugs-fixes": "5.0.2",
@@ -63,5 +74,10 @@
     "vite-plugin-eslint": "1.8.1",
     "vite-plugin-stylelint": "3.2.0",
     "vitest": "^0.28.3"
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": "npm run lint",
+    "./src/*.{css,scss,sass}": "npm run stylelint",
+    "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier -w -u"
   }
 }

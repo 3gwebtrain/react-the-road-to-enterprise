@@ -40,7 +40,7 @@ module.exports = {
     // Limit the number of universal selectors in a selector,
     // to avoid very slow selectors
     'selector-max-universal': 1,
-    'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$',
+    'selector-class-pattern': null,
     // --------
     // SCSS rules
     // --------
