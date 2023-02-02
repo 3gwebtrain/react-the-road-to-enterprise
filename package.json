@@ -21,6 +21,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "1.2.0",
     "@tailwindcss/forms": "^0.5.3",
+    "@testing-library/cypress": "^9.0.0",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -28,6 +29,7 @@
     "@typescript-eslint/parser": "5.44.0",
     "@vitejs/plugin-react": "^3.0.0",
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.5.0",
     "eslint": "8.28.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-cypress": "2.12.1",
@@ -45,6 +47,7 @@
     "postcss-reporter": "7.0.5",
     "prettier": "2.8.0",
     "sass": "^1.58.0",
+    "start-server-and-test": "^1.15.3",
     "stylelint": "14.15.0",
     "stylelint-config-css-modules": "4.1.0",
     "stylelint-config-prettier": "9.0.4",
