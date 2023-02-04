@@ -1,0 +1,12 @@
+.tab {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: none;
+}
+
+.activeTab {
+  border-bottom: 2px solid blue;
+}
+.inActiveTab {
+  border-bottom: 2px solid transparent;
+}
