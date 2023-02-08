@@ -2,9 +2,9 @@
 
 module.exports = {
   extends: [
-    'stylelint-config-standard',
-    'stylelint-config-recess-order',
+    'stylelint-config-standard-scss',
     'stylelint-config-css-modules',
+    'stylelint-config-recess-order',
     'stylelint-config-prettier',
     // Uncomment out the below if you want to use scss
     'stylelint-config-standard-scss',

@@ -15,6 +15,7 @@ function TabPanel(props: TabPanelProps) {
       role='tabpanel'
       aria-labelledby={`tab-${id}`}
       hidden={id !== activeTab}
+      data-testid={id}
     >
       {children}
     </div>

@@ -11,9 +11,15 @@ function App() {
           <Tab id='privacy'>Privacy</Tab>
         </div>
         <div className='flex p-4 border'>
-          <TabPanel id='account'>Account Panel</TabPanel>
-          <TabPanel id='settings'>Settings Panel</TabPanel>
-          <TabPanel id='privacy'>Privacy Panel</TabPanel>
+          <TabPanel id='account' data-testid='account'>
+            Account Panel
+          </TabPanel>
+          <TabPanel id='settings' data-testid='settings'>
+            Settings Panel
+          </TabPanel>
+          <TabPanel id='privacy' data-testid='privacy'>
+            Privacy Panel
+          </TabPanel>
         </div>
       </Tabs>
     </div>

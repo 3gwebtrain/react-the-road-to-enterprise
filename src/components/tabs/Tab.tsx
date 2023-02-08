@@ -10,7 +10,7 @@ type TabProps = {
 function Tab(props: TabProps) {
   const { children, id } = props;
   const activeTab = useTabsContext();
-  const setActiveTab = useTabsActionsContext();
+  const newActiveTab = useTabsActionsContext();
   const isActive = id === activeTab;
   return (
     <button
@@ -19,7 +19,7 @@ function Tab(props: TabProps) {
       role='tab'
       aria-selected={isActive}
       aria-controls={`tab-panel-${id}`}
-      onClick={() => setActiveTab(id)}
+      onClick={() => newActiveTab(id)}
     >
       {children}
     </button>
