@@ -17,7 +17,7 @@ type TabsProps = {
 
 function Tabs(props: TabsProps) {
   const { children, initialActiveTab } = props;
-  const [activeTab, setActiveTab] = useState(initialActiveTab);
+  const [activeTab, setActiveTab] = useState<string>(initialActiveTab);
 
   return (
     <TabsContext.Provider value={activeTab}>
